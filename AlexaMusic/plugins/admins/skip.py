@@ -1,12 +1,6 @@
-#
-# Copyright (C) 2021-2022 by Alexa_Help@Github, < https://github.com/Jankarikiduniya >.
-# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
-
-# Kanged By © @Dr_Asad_Ali
-# Rocks © @Shayri_Music_Lovers
-# Owner Asad Ali
-# Harshit Sharma
-# All rights reserved. © Alisha © Alexa © Yukki
+# Kanged By © @always_hungry365
+# Owner Mayank
+# All rights reserved. © Alisha © Insane © Yukki
 
 
 from pyrogram import filters
@@ -15,14 +9,14 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from AlexaMusic import YouTube, app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.misc import db
-from AlexaMusic.utils.database import get_loop
-from AlexaMusic.utils.decorators import AdminRightsCheck
-from AlexaMusic.utils.inline.play import stream_markup, telegram_markup
-from AlexaMusic.utils.stream.autoclear import auto_clean
-from AlexaMusic.utils.thumbnails import gen_thumb
+from InsaneMusic import YouTube, app
+from InsaneMusic.core.call import Insane
+from InsaneMusic.misc import db
+from InsaneMusic.utils.database import get_loop
+from InsaneMusic.utils.decorators import AdminRightsCheck
+from InsaneMusic.utils.inline.play import stream_markup, telegram_markup
+from InsaneMusic.utils.stream.autoclear import auto_clean
+from InsaneMusic.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")
@@ -63,7 +57,7 @@ async def skip(cli, message: Message, _, chat_id):
                                         ),
                                         disable_web_page_preview=True,
                                     )
-                                    await Alexa.stop_stream(chat_id)
+                                    await Insane.stop_stream(chat_id)
                                 except:
                                     return
                                 break
@@ -89,7 +83,7 @@ async def skip(cli, message: Message, _, chat_id):
                     disable_web_page_preview=True,
                 )
                 try:
-                    return await Alexa.stop_stream(chat_id)
+                    return await Insane.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -98,7 +92,7 @@ async def skip(cli, message: Message, _, chat_id):
                     _["admin_10"].format(message.from_user.first_name),
                     disable_web_page_preview=True,
                 )
-                return await Alexa.stop_stream(chat_id)
+                return await Insane.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
@@ -112,7 +106,7 @@ async def skip(cli, message: Message, _, chat_id):
         if n == 0:
             return await message.reply_text(_["admin_11"].format(title))
         try:
-            await Alexa.skip_stream(chat_id, link, video=status)
+            await Insane.skip_stream(chat_id, link, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
@@ -139,7 +133,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             return await mystic.edit_text(_["call_9"])
         try:
-            await Alexa.skip_stream(chat_id, file_path, video=status)
+            await Insane.skip_stream(chat_id, file_path, video=status)
         except Exception:
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
@@ -157,7 +151,7 @@ async def skip(cli, message: Message, _, chat_id):
         await mystic.delete()
     elif "index_" in queued:
         try:
-            await Alexa.skip_stream(chat_id, videoid, video=status)
+            await Insane.skip_stream(chat_id, videoid, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
@@ -170,7 +164,7 @@ async def skip(cli, message: Message, _, chat_id):
         db[chat_id][0]["markup"] = "tg"
     else:
         try:
-            await Alexa.skip_stream(chat_id, queued, video=status)
+            await Insane.skip_stream(chat_id, queued, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":

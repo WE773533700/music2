@@ -1,12 +1,6 @@
-#
-# Copyright (C) 2021-2022 by Alexa_Help@Github, < https://github.com/Jankarikiduniya >.
-# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
-
-# Kanged By © @Dr_Asad_Ali
-# Rocks © @Shayri_Music_Lovers
-# Owner Asad Ali
-# Harshit Sharma
-# All rights reserved. © Alisha © Alexa © Yukki
+# Kanged By © @always_hungry365
+# Owner Mayank
+# All rights reserved. © Alisha © Insane © Yukki
 
 
 from pyrogram import filters
@@ -14,10 +8,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from AlexaMusic import YouTube, app
-from AlexaMusic.core.call import Alexa
-from AlexaMusic.misc import db
-from AlexaMusic.utils import AdminRightsCheck, seconds_to_min
+from InsaneMusic import YouTube, app
+from InsaneMusic.core.call import Insane
+from InsaneMusic.misc import db
+from InsaneMusic.utils import AdminRightsCheck, seconds_to_min
 
 # Commands
 SEEK_COMMAND = get_command("SEEK_COMMAND")
@@ -63,7 +57,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
         if n == 0:
             return await message.reply_text(_["admin_30"])
     try:
-        await Alexa.seek_stream(
+        await Insane.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),

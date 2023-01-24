@@ -40,7 +40,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"
+                text="« المطـور »", url=f"https://t.me/FH_KN"
             ),
         ],
         [
@@ -48,12 +48,12 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="˝التحديثات˝", url=f"https://t.me/FH_KP"),
         ],
         [
             InlineKeyboardButton(
-                text=f"☀ ᴀʟᴇxᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ☀",
-                url=f"https://t.me/Alexa_ManagementBot",
+                text=f"« 𝙉𝙊𝙑𝘼𝙉 𝙈𝙐𝙎𝙄𝘾⁩ »",
+                url=f"https://t.me/CR_7LKMBOT",
             )
         ],
     ]
@@ -74,14 +74,14 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="« المطـور »", url=f"https://t.me/FH_KN"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="˝التحديثات˝", url=f"https://t.me/FH_KP"),
         ],
     ]
     return buttons
@@ -97,14 +97,14 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="« المطـور »", url=f"https://t.me/FH_KN"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="˝التحديثات˝", url=f"https://t.me/FH_KP"),
         ],
     ]
     return buttons
@@ -259,36 +259,36 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⇆ sʜᴜғғʟᴇ ⇆",
+                text="« عشوائي »",
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="↻ ʟᴏᴏᴩ ↻", callback_data=f"ADMIN Loop|{chat_id}"
+                text="« تكرار »", callback_data=f"ADMIN Loop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⏮ 10 sᴇᴄᴏɴᴅ",
+                text="⏮ 10 تقديم",
                 callback_data=f"ADMIN 1|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 10 sᴇᴄᴏɴᴅ",
+                text="⏭ 10 رجوع",
                 callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⏮ 30 sᴇᴄᴏɴᴅ",
+                text="⏮ 30 تقديم",
                 callback_data=f"ADMIN 3|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 30 sᴇᴄᴏɴᴅ",
+                text="⏭ 30 رجوع",
                 callback_data=f"ADMIN 4|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="↻ ʙᴀᴄᴋ ↻",
+                text="« رجـوع »",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
         ],

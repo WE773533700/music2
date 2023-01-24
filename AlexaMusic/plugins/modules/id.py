@@ -4,7 +4,7 @@ from AlexaMusic import app
 from pyrogram import filters
 
 
-@app.on_message(filters.command("id"))
+@app.on_message(filters.command("ايدي","ا","id"],"))
 def ids(_, message):
     reply = message.reply_to_message
     if reply:

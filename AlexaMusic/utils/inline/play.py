@@ -53,7 +53,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text=f"« 𝙀𝙑𝘼 𝙈𝙐𝙎𝙄𝘾⁩ »",
-                url=f"https://t.me/CR_7LKMBOT?startgroup=true",
+                url=f"https://t.me/CR_7LKMBOT",
             )
         ],
     ]
